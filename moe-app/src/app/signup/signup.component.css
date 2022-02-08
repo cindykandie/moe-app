@@ -1,0 +1,36 @@
+.form-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+
+}
+h2{
+}
+span{
+        color: blue;
+        cursor: pointer;
+}
+span:hover{
+    color:grey;
+    text-decoration: underline;
+}
+input{
+    border: transparent;
+    border-bottom: 2px solid gray;
+    outline:none;
+}
+input:hover{
+    border-bottom: 2px solid black;
+
+}
+
+input[type=submit]{
+    margin: auto;
+    border-bottom: transparent;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}

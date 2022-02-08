@@ -1,0 +1,23 @@
+<!-- <h2 [class]="successClass" >{{greetUser() + ", Welcome!"}}</h2> -->
+<!-- <h2 [class.text-special]="true" >{{greetUser() + ", Welcome!"}}</h2>
+<h2 [ngClass]= "messageClasses">Cat</h2> -->
+
+<!-- <h2 [style.color]="hasError ? 'red' : 'green'">Style Binding</h2> -->
+
+<!-- <h2 [style.color]="highlightColor">Woooow</h2> -->
+<!-- <input [(ngModel)]="name" type="text">
+{{name}} -->
+<!-- <h2 *ngIf = "displayName; else elseBlock">Landmile</h2>
+
+<ng-template #elseBlock>
+    <h2>Namibia</h2>
+</ng-template> -->
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <h2>Namibia</h2>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h2>hidden</h2>
+</ng-template>
