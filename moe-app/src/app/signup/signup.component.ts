@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  public greeting= "manzee";
+  public greeting= "heyyy";
+  public password!: string; 
 
-  // logMessage(value){
-  //   alert(value)
+
+  // logMessage(){
+  //   alert(this.password)
   // }
+
+  // validatePassword(){
+  //   console.log(this.password)
+  // }
+
 
   constructor() { }
 

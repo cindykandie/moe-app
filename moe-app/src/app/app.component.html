@@ -1,7 +1,8 @@
 <header>
-  <h1>Welcome to {{title}}</h1>
+  <h1>Welcome to {{message}}</h1>
 </header>
-<app-welcome></app-welcome>
+<app-welcome (childEvent)="message=$event" [parentData]="name"></app-welcome>
+
 <app-signup></app-signup>
 
 
