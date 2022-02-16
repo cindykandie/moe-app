@@ -1,35 +1,35 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { Component,  OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { IEmployee } from '../interfaces';
+import { TestService2 } from '../test.service';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styles: [`
-  .text-success{
-    color:green;
-  }
-
-  .text-danger{
-    color:red;
-  }
-
-  .text-special{
-    font-style: italic;
-  }
-  
-  `]
+  styles: [``]
 })
 export class WelcomeComponent implements OnInit {
-  @Input() public parentData:any;
-  @Output() public childEvent = new EventEmitter();
-  
-  constructor() { }
+  public employees: IEmployee[] = []
+  public errorMsg: any;
+  constructor(private _testService: TestService2) {}
 
-  ngOnInit(){  
-  }
-  fireEvent(){
-    this.childEvent.emit('heyyyy')
-  }
+  ngOnInit(): void{ 
+    this._testService.getEmployees()
+    .subscribe(data => this.employees = data)
+              /** */
+  
 }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 // public colors = ["yellow", "red", "green", "purple"]
 // public name = ""
@@ -46,3 +46,9 @@ export class WelcomeComponent implements OnInit {
   // greetUser(){
   //   return "Hello " + this.name
   // }
+  // fireEvent(){
+  //   this.childEvent.emit('heyyyy')
+  // }
+  // @Input('parentData') public name:any;
+
+  // @Output() public childEvent = new EventEmitter();

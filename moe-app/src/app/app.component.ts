@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Moe App';
   
-  public name = "katie";
+  public name = "katie"; //name to be input from app component to welcome component
 
-  public message= ""
+  public message= "Moe App"
 
 }
